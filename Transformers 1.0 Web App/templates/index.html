@@ -3,43 +3,31 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Courses | Education</title>
+    <title>Transformers 1.0 | Indonesian Language Automatic Essay Scoring</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static',filename='assets/img/essay.png') }}">
 
     <!-- CSS here -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/slicknav.css">
-    <link rel="stylesheet" href="assets/css/flaticon.css">
-    <link rel="stylesheet" href="assets/css/progressbar_barfiller.css">
-    <link rel="stylesheet" href="assets/css/gijgo.css">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/animated-headline.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/css/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/nice-select.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/slicknav.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/progressbar_barfiller.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/gijgo.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/animated-headline.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/themify-icons.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/slick.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/nice-select.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/style.css') }}">
     
 </head>
 
 <body>
-    <!-- ? Preloader Start -->
-    <div id="preloader-active">
-        <div class="preloader d-flex align-items-center justify-content-center">
-            <div class="preloader-inner position-relative">
-                <div class="preloader-circle"></div>
-                <div class="preloader-img pere-text">
-                    <img src="assets/img/logo/loder.png" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Preloader Start -->
     <header>
         <!-- Header Start -->
         <div class="header-area header-transparent">
@@ -50,7 +38,7 @@
                             <!-- Logo -->
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                    <a href="index.html"><img src="{{ url_for('static',filename='assets/img/logo/essay_logo.png') }}" height="30px" alt=""></a>
                                 </div>
                             </div>
                             <div class="col-xl-10 col-lg-10">
@@ -99,9 +87,9 @@
                         <div class="row">
                             <div class="col-xl-6 col-lg-7 col-md-12">
                                 <div class="hero__caption">
-                                    <h1 data-animation="fadeInLeft" data-delay="0.2s">Online learning<br> platform</h1>
-                                    <p data-animation="fadeInLeft" data-delay="0.4s">Build skills with courses, certificates, and degrees online from world-class universities and companies</p>
-                                    <a href="#" class="btn hero-btn" data-animation="fadeInLeft" data-delay="0.7s">Join for Free</a>
+                                    <h1 data-animation="fadeInLeft" data-delay="0.2s">Transformers 1.0</h1>
+                                    <p data-animation="fadeInLeft" data-delay="0.4s">Transformers 1.0 is a web-based application of automatic essay type question scoring/ grading using various deep learning architecture with IndoBERT embedding</p>
+                                    <a href="/aes" class="btn hero-btn" data-animation="fadeInLeft" data-delay="0.7s">Get Started &#8594</a>
                                 </div>
                             </div>
                         </div>
@@ -116,7 +104,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-8">
                         <div class="single-services mb-30">
                             <div class="features-icon">
-                                <img src="assets/img/icon/icon1.svg" alt="">
+                                <img src="{{ url_for('static',filename='assets/img/icon/icon1.svg') }}" alt="">
                             </div>
                             <div class="features-caption">
                                 <h3>60+ UX courses</h3>
@@ -127,7 +115,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-8">
                         <div class="single-services mb-30">
                             <div class="features-icon">
-                                <img src="assets/img/icon/icon2.svg" alt="">
+                                <img src="{{ url_for('static',filename='assets/img/icon/icon2.svg') }}" alt="">
                             </div>
                             <div class="features-caption">
                                 <h3>Expert instructors</h3>
@@ -138,7 +126,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-8">
                         <div class="single-services mb-30">
                             <div class="features-icon">
-                                <img src="assets/img/icon/icon3.svg" alt="">
+                                <img src="{{ url_for('static',filename='assets/img/icon/icon3.svg') }}" alt="">
                             </div>
                             <div class="features-caption">
                                 <h3>Life time access</h3>
@@ -164,7 +152,7 @@
                     <div class="properties pb-20">
                         <div class="properties__card">
                             <div class="properties__img overlay1">
-                                <a href="#"><img src="assets/img/gallery/featured1.png" alt=""></a>
+                                <a href="#"><img src="{{ url_for('static',filename='assets/img/gallery/featured1.png') }}" alt=""></a>
                             </div>
                             <div class="properties__caption">
                                 <p>User Experience</p>
@@ -197,7 +185,7 @@
                     <div class="properties pb-20">
                         <div class="properties__card">
                             <div class="properties__img overlay1">
-                                <a href="#"><img src="assets/img/gallery/featured2.png" alt=""></a>
+                                <a href="#"><img src="{{ url_for('static',filename='assets/img/gallery/featured2.png') }}" alt=""></a>
                             </div>
                             <div class="properties__caption">
                                 <p>User Experience</p>
