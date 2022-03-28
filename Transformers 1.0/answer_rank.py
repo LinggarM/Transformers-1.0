@@ -1,5 +1,6 @@
-import tensorflow as tf
 import numpy as np
+import tensorflow as tf
+from tensorflow.keras import backend as K
 
 class AnswerRank :
 
@@ -17,7 +18,7 @@ class AnswerRank :
     def measureDistance(self) :
         dist_list = []
         for i in range(self.njawaban) :
-            dist = cosineSimilarity(self.embedded_pertanyaan[0], self.embedded_jawaban[i][0])
+            dist = self.cosineSimilarity(self.embedded_pertanyaan, self.embedded_jawaban[i])
             dist_list.append(float(dist))
         self.dist_list = dist_list
     
@@ -25,6 +26,6 @@ class AnswerRank :
         return K.mean(K.constant(x), axis=1, keepdims=False)
     
     def cosineSimilarity(self, x, y) :
-        normalize_a = tf.nn.l2_normalize(avgPooling(x), 0)        
-        normalize_b = tf.nn.l2_normalize(avgPooling(y), 0)
+        normalize_a = tf.nn.l2_normalize(self.avgPooling(x), 0)        
+        normalize_b = tf.nn.l2_normalize(self.avgPooling(y), 0)
         return tf.reduce_sum(tf.multiply(normalize_a,normalize_b))

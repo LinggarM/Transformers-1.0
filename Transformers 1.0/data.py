@@ -6,8 +6,8 @@ class Data :
     def __init__(self) :
         # path
         self.path = "data"
-        self.path_pertanyaan = f"{self.path}\pertanyaan.txt"
-        self.path_jawaban = f"{self.path}\jawaban.csv"
+        self.path_pertanyaan = f"{self.path}/pertanyaan.txt"
+        self.path_jawaban = f"{self.path}/jawaban.csv"
 
         # pertanyaan
         self.pertanyaan = open(self.path_pertanyaan).read()
@@ -21,6 +21,3 @@ class Data :
 
         # n jawaban
         self.njawaban = len(self.jawaban_df)
-    
-    def isColumnNormal() :
-        return 0
