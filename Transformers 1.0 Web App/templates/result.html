@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Input Question & Answers | Transformers 1.0</title>
+    <title>Scoring Results | Transformers 1.0</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
@@ -88,61 +88,61 @@
                 <div class="row justify-content-center">
                     <div class="col-xl-7 col-lg-8">
                         <div class="section-tittle text-center mb-55">
-                            <h2>Input Question & Answers</h2>
+                            <h2>Scoring Result</h2>
+                            <p>Scoring is successful! Here's your answers's scoring result. You can download it as .csv or .xlsx file</p>
                         </div>
                     </div>
                 </div>
-                
-                <form name="essayform" action="/scoring" method="POST" enctype="multipart/form-data">
-                    <h2 style="margin-bottom: 10px;">Input Question</h2>
-                    <div class="row justify-content-center">
-                        <textarea class="single-textarea" name="pertanyaan" placeholder="Write your question here..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Write your question here...'" required></textarea>
-                    </div>
 
-                    <h2 style="margin-top: 50px; margin-bottom: 10px;">Upload Answers</h2>
-                    <div class="row">
-                        <input type="file" id="getFile" style="display:none" name="file" accept=".csv" onchange="changename()"/>
-                        <a href="#" class="genric-btn primary e-large circle arrow" onclick="document.getElementById('getFile').click()">
-                            <div class="icon"><i class="fa fa-upload" aria-hidden="true"></i></div> &nbsp;Upload Answer Data
-                        </a>
-                        &nbsp;
-                        <p class="filename" style="margin:12px 0"><!-- &nbsp; file_jawaban.csv --></p>
-                    </div>
-                    
-                    <div class="row justify-content-center">
-                        <div class="col-xl-7 col-lg-8">
-                            <div class="section-tittle text-center mt-40">
-                                <input type="submit" style="display:none" id="submit" onclick="return checkpertanyaan();">
-                                <a href="#" class="btn hero-btn" style = "padding: 30px 50px !important" onclick="document.getElementById('submit').click()">Proceed &#8594</a>
+                <div class="row justify-content-center">
+                    <form name="scoreform" action="/result" method="POST" >
+                        <div class="progress-table-wrap">
+                            <div class="progress-table">
+                                <div class="table-head">
+                                    <div class="serial">ID Mahasiswa</div>
+                                    <div class="answer">Answers</div>
+                                    <div class="score">Score</div>
+                                </div>
+                                {% for num in num_score %}
+                                    <div class="table-row">
+                                        <div class="serial">{{ id_mahasiswa_new[num] }}</div>
+                                        <div class="answer">{{ jawaban_new[num] }}</div>
+                                        <div class="score">{{ score_new[num] }}
+                                        </div>
+                                    </div>
+                                {% endfor %}
                             </div>
                         </div>
-                    </div>
-                </form>
+                        <div class="row justify-content-center">
+                            <div class="col-xl-7 col-lg-8">
+                                <div class="section-tittle text-center mt-40">
+                                    <a href="/static/files/data/scoring_result.csv" class="genric-btn primary e-large circle arrow">
+                                        <div class="icon"><i class="fa fa-download" aria-hidden="true"></i></div> &nbsp;Download Scoring Result (.CSV)
+                                    </a>
+                                    <a href="/static/files/data/scoring_result.xlsx" class="genric-btn primary e-large circle arrow">
+                                        <div class="icon"><i class="fa fa-download" aria-hidden="true"></i></div> &nbsp;Download Scoring Result (.XLSX)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
 
             </div>
         </div>
     </main>
     
     <script>
-        function changename() {
-            var oriname = String(document.getElementById('getFile').files[0].name)
-            document.querySelector(".filename").textContent = oriname
-        };
-
-        function checkpertanyaan()
-        {
-            if (!essayform.pertanyaan.value)
-            {
-                alert ("Please Fill The Question!");
+        function checkscore() {
+          var inputs = $(".single-input");
+          for (var i = 0; i < inputs.length; i++) {
+              if ($(inputs[i]).val().length == 0) {
+                alert ("Please Fill The Score!");
                 return (false);
-            }
-            if (document.querySelector(".filename").textContent == "")
-            {
-                alert ("Please Upload The Answers!");
-                return (false);
-            }
+              }
+          }
             return (true);
-        };
+        }
     </script>
     <script>
         document.onreadystatechange = function() {
@@ -150,11 +150,6 @@
                 document.querySelector("#preloader-active").style.display = "none";
             }
         };
-    </script>
-    <script>
-        function showloader() {
-            document.querySelector("#preloader-active").style.display = "visible";
-        }
     </script>
 
     <!-- JS here -->

@@ -2343,7 +2343,7 @@ hr {
 }
 
 .section-padding40 {
-    padding-top: 75px;
+    padding-top: 85px;
     padding-bottom: 75px
 }
 
@@ -6495,11 +6495,21 @@ del {
 .progress-table {
     background: #f9f9ff;
     padding: 15px 0px 30px 0px;
-    min-width: 800px
+    min-width: 80vw
 }
 
 .progress-table .serial {
-    width: 11.83%;
+    width: 12%;
+    padding-left: 30px
+}
+
+.progress-table .answer {
+    width: 68%;
+    padding-left: 30px
+}
+
+.progress-table .score {
+    width: 20%;
     padding-left: 30px
 }
 
@@ -6521,6 +6531,8 @@ del {
 }
 
 .progress-table .table-head .serial,
+.progress-table .table-head .answer,
+.progress-table .table-head .score,
 .progress-table .table-head .country,
 .progress-table .table-head .visit,
 .progress-table .table-head .percentage {
@@ -6537,6 +6549,8 @@ del {
 }
 
 .progress-table .table-row .serial,
+.progress-table .table-row .answer,
+.progress-table .table-row .score,
 .progress-table .table-row .country,
 .progress-table .table-row .visit,
 .progress-table .table-row .percentage {
