@@ -28,53 +28,48 @@
 </head>
 
 <body>
-    <!-- Header Start -->
-    <div class="header-area header-transparent">
-        <div class="main-header ">
-            <div class="header-bottom  header-sticky">
-                <div class="container-fluid">
-                    <div class="row align-items-center">
-                        <!-- Logo -->
-                        <div class="col-xl-2 col-lg-2">
-                            <div class="logo">
-                                <a href="/"><img src="{{ url_for('static',filename='assets/img/logo/essay_logo.png') }}" height="30px" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="col-xl-10 col-lg-10">
-                            <div class="menu-wrapper d-flex align-items-center justify-content-end">
-                                <!-- Main-menu -->
-                                <div class="main-menu d-none d-lg-block">
-                                    <nav>
-                                        <ul id="navigation">
-                                            <li class="active"><a href="index.html">Home</a></li>
-                                            <li><a href="courses.html">Courses</a></li>
-                                            <li><a href="about.html">About</a></li>
-                                            <li><a href="#">Blog</a>
-                                                <ul class="submenu">
-                                                    <li><a href="blog.html">Blog</a></li>
-                                                    <li><a href="blog_details.html">Blog Details</a></li>
-                                                    <li><a href="elements.html">Element</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="contact.html">Contact</a></li>
-                                            <!-- Button -->
-                                            <li class="button-header margin-left "><a href="#" class="btn">Join</a></li>
-                                            <li class="button-header"><a href="login.html" class="btn btn3">Log in</a></li>
-                                        </ul>
-                                    </nav>
+    <header>
+        <!-- Header Start -->
+        <div class="header-area header-transparent">
+            <div class="main-header ">
+                <div class="header-bottom  header-sticky">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <!-- Logo -->
+                            <div class="col-xl-4 col-lg-2">
+                                <div class="logo">
+                                    <a href="/">
+                                        <img src="{{ url_for('static',filename='assets/img/logo/essay_logo.png') }}" height="30px" alt="">
+                                    </a>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Mobile Menu -->
-                        <div class="col-12">
-                            <div class="mobile_menu d-block d-lg-none"></div>
+                            <div class="col-xl-8 col-lg-10">
+                                <div class="menu-wrapper d-flex align-items-center justify-content-end">
+                                    <!-- Main-menu -->
+                                    <div class="main-menu d-none d-lg-block">
+                                        <nav>
+                                            <ul id="navigation">
+                                                <li class="active"><a href="/">Home</a></li>
+                                                <li><a href="/tutorial">Tutorial</a></li>
+                                                <li><a href="/about">About</a></li>
+                                                <!-- Button -->
+                                                <li class="button-header margin-left "><a href="https://github.com/LinggarM/Transformers-1.0" class="btn">Github Project</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Mobile Menu -->
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Header End -->
+        <!-- Header End -->
+    </header>
     <main>
         <!-- Courses area start -->
         <div style="margin-top: 80px" class="courses-area section-padding40 fix">
@@ -86,222 +81,53 @@
                         </div>
                     </div>
                 </div>
-                <h2 style="margin-bottom: 10px;">Input Question</h2>
-                <div class="row justify-content-center">
-                    <textarea class="single-textarea" placeholder="Write your question here..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Write your question here...'" required></textarea>
-                    <!-- <div class="col-lg-4">
-                            <div class="properties properties2 mb-30">
-                                <div class="properties__card">
-                                    <div class="properties__img overlay1">
-                                        <a href="#"><img src="assets/img/gallery/featured1.png" alt=""></a>
-                                    </div>
-                                    <div class="properties__caption">
-                                        <p>User Experience</p>
-                                        <h3><a href="#">Fundamental of UX for Application design</a></h3>
-                                        <p>The automated process all your website tasks. Discover tools and techniques to engage effectively with vulnerable children and young people.
-                                        </p>
-                                        <div class="properties__footer d-flex justify-content-between align-items-center">
-                                            <div class="restaurant-name">
-                                                <div class="rating">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star-half"></i>
-                                                </div>
-                                                <p><span>(4.5)</span> based on 120</p>
-                                            </div>
-                                            <div class="price">
-                                                <span>$135</span>
-                                            </div>
-                                        </div>
-                                        <a href="#" class="border-btn border-btn2">Find out more</a>
-                                    </div>
-                                </div>
+                
+                <form name="essayform" action="/aes" method="POST" enctype="multipart/form-data">
+                    <h2 style="margin-bottom: 10px;">Input Question</h2>
+                    <div class="row justify-content-center">
+                        <textarea class="single-textarea" name="pertanyaan" placeholder="Write your question here..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Write your question here...'" required></textarea>
+                    </div>
+
+                    <h2 style="margin-top: 50px; margin-bottom: 10px;">Upload Answers</h2>
+                    <div class="row">
+                        <input type="file" id="getFile" style="display:none" name="file" accept=".csv" onchange="changename()"/>
+                        <a href="#" class="genric-btn primary e-large circle arrow" onclick="document.getElementById('getFile').click()">
+                            <div class="icon"><i class="fa fa-upload" aria-hidden="true"></i></div> &nbsp;Upload Answer Data
+                        </a>
+                        &nbsp;
+                        <p class="filename" style="margin:12px 0"><!-- &nbsp; file_jawaban.csv --></p>
+                    </div>
+                    
+                    <div class="row justify-content-center">
+                        <div class="col-xl-7 col-lg-8">
+                            <div class="section-tittle text-center mt-40">
+                                <input type="submit" style="display:none" id="submit" onclick="return checkpertanyaan();">
+                                <a href="#" class="btn hero-btn" style = "padding: 30px 50px !important" onclick="document.getElementById('submit').click()">Proceed &#8594</a>
                             </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="properties properties2 mb-30">
-                                <div class="properties__card">
-                                    <div class="properties__img overlay1">
-                                        <a href="#"><img src="assets/img/gallery/featured2.png" alt=""></a>
-                                    </div>
-                                    <div class="properties__caption">
-                                        <p>User Experience</p>
-                                        <h3><a href="#">Fundamental of UX for Application design</a></h3>
-                                        <p>The automated process all your website tasks. Discover tools and techniques to engage effectively with vulnerable children and young people.
-                                            
-                                        </p>
-                                        <div class="properties__footer d-flex justify-content-between align-items-center">
-                                            <div class="restaurant-name">
-                                                <div class="rating">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star-half"></i>
-                                                </div>
-                                                <p><span>(4.5)</span> based on 120</p>
-                                            </div>
-                                            <div class="price">
-                                                <span>$135</span>
-                                            </div>
-                                        </div>
-                                        <a href="#" class="border-btn border-btn2">Find out more</a>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="properties properties2 mb-30">
-                                <div class="properties__card">
-                                    <div class="properties__img overlay1">
-                                        <a href="#"><img src="assets/img/gallery/featured3.png" alt=""></a>
-                                    </div>
-                                    <div class="properties__caption">
-                                        <p>User Experience</p>
-                                        <h3><a href="#">Fundamental of UX for Application design</a></h3>
-                                        <p>The automated process all your website tasks. Discover tools and techniques to engage effectively with vulnerable children and young people.
-                                            
-                                        </p>
-                                        <div class="properties__footer d-flex justify-content-between align-items-center">
-                                            <div class="restaurant-name">
-                                                <div class="rating">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star-half"></i>
-                                                </div>
-                                                <p><span>(4.5)</span> based on 120</p>
-                                            </div>
-                                            <div class="price">
-                                                <span>$135</span>
-                                            </div>
-                                        </div>
-                                        <a href="#" class="border-btn border-btn2">Find out more</a>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="properties properties2 mb-30">
-                                <div class="properties__card">
-                                    <div class="properties__img overlay1">
-                                        <a href="#"><img src="assets/img/gallery/featured4.png" alt=""></a>
-                                    </div>
-                                    <div class="properties__caption">
-                                        <p>User Experience</p>
-                                        <h3><a href="#">Fundamental of UX for Application design</a></h3>
-                                        <p>The automated process all your website tasks. Discover tools and techniques to engage effectively with vulnerable children and young people.
-                                            
-                                        </p>
-                                        <div class="properties__footer d-flex justify-content-between align-items-center">
-                                            <div class="restaurant-name">
-                                                <div class="rating">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star-half"></i>
-                                                </div>
-                                                <p><span>(4.5)</span> based on 120</p>
-                                            </div>
-                                            <div class="price">
-                                                <span>$135</span>
-                                            </div>
-                                        </div>
-                                        <a href="#" class="border-btn border-btn2">Find out more</a>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="properties properties2 mb-30">
-                                <div class="properties__card">
-                                    <div class="properties__img overlay1">
-                                        <a href="#"><img src="assets/img/gallery/featured5.png" alt=""></a>
-                                    </div>
-                                    <div class="properties__caption">
-                                        <p>User Experience</p>
-                                        <h3><a href="#">Fundamental of UX for Application design</a></h3>
-                                        <p>The automated process all your website tasks. Discover tools and techniques to engage effectively with vulnerable children and young people.
-                                            
-                                        </p>
-                                        <div class="properties__footer d-flex justify-content-between align-items-center">
-                                            <div class="restaurant-name">
-                                                <div class="rating">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star-half"></i>
-                                                </div>
-                                                <p><span>(4.5)</span> based on 120</p>
-                                            </div>
-                                            <div class="price">
-                                                <span>$135</span>
-                                            </div>
-                                        </div>
-                                        <a href="#" class="border-btn border-btn2">Find out more</a>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="properties properties2 mb-30">
-                                <div class="properties__card">
-                                    <div class="properties__img overlay1">
-                                        <a href="#"><img src="assets/img/gallery/featured6.png" alt=""></a>
-                                    </div>
-                                    <div class="properties__caption">
-                                        <p>User Experience</p>
-                                        <h3><a href="#">Fundamental of UX for Application design</a></h3>
-                                        <p>The automated process all your website tasks. Discover tools and techniques to engage effectively with vulnerable children and young people.
-                                        </p>
-                                        <div class="properties__footer d-flex justify-content-between align-items-center">
-                                            <div class="restaurant-name">
-                                                <div class="rating">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star-half"></i>
-                                                </div>
-                                                <p><span>(4.5)</span> based on 120</p>
-                                            </div>
-                                            <div class="price">
-                                                <span>$135</span>
-                                            </div>
-                                        </div>
-                                        <a href="#" class="border-btn border-btn2">Find out more</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                </div>
-                <h2 style="margin-top: 50px; margin-bottom: 10px;">Upload Answers</h2>
-                <div class="row">
-                    <a href="#" class="genric-btn primary e-large circle arrow">
-                        <div class="icon"><i class="fa fa-upload" aria-hidden="true"></i></div> &nbsp;Upload Answer Data
-                    </a>
-                    <p style="margin:12px 0">&nbsp; file_jawaban.csv</p>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-xl-7 col-lg-8">
-                        <div class="section-tittle text-center mt-40">
-                            <input type=submit class="border-btn" value="Proceed &#8594">
-                            <a href="#" class="border-btn">Proceed &#8594</a>
                         </div>
                     </div>
-                </div>
+                </form>
+
             </div>
         </div>
     </main>
+    
+    <script>
+        function changename() {
+            var oriname = String(document.getElementById('getFile').files[0].name)
+            document.querySelector(".filename").textContent = oriname
+        };
+
+        function checkpertanyaan()
+        {
+            if (!essayform.pertanyaan.value)
+            {
+                alert ("Please Fill The Question!");
+                return (false);
+            }
+            return (true);
+        };
+    </script>
 
     <!-- JS here -->
     <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>

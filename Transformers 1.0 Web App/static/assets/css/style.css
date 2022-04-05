@@ -397,7 +397,7 @@ hr {
     top: 0;
     width: 101%;
     height: 101%;
-    background: #AE59FF;
+    background: #1f2b7b;
     z-index: 1;
     border-radius: 5px;
     transition: transform 0.5s;
@@ -2343,8 +2343,8 @@ hr {
 }
 
 .section-padding40 {
-    padding-top: 100px;
-    padding-bottom: 100px
+    padding-top: 75px;
+    padding-bottom: 75px
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -2984,7 +2984,7 @@ hr {
 }
 
 .slider-height {
-    min-height: 854px;
+    min-height: 100vh;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover
@@ -4539,7 +4539,7 @@ hr {
 }
 
 .login-form .logo-login img {
-    width: 99px;
+    width: auto;
     height: 95px;
     position: absolute;
     top: -57px;

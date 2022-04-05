@@ -25,7 +25,6 @@
     <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/slick.css') }}">
     <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/nice-select.css') }}">
     <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/style.css') }}">
-
 </head>
 
 <body>
@@ -37,31 +36,24 @@
                     <div class="container-fluid">
                         <div class="row align-items-center">
                             <!-- Logo -->
-                            <div class="col-xl-2 col-lg-2">
+                            <div class="col-xl-4 col-lg-2">
                                 <div class="logo">
-                                    <a href="index.html"><img src="{{ url_for('static',filename='assets/img/logo/essay_logo.png') }}" height="30px" alt=""></a>
+                                    <a href="/">
+                                        <img src="{{ url_for('static',filename='assets/img/logo/essay_logo.png') }}" height="30px" alt="">
+                                    </a>
                                 </div>
                             </div>
-                            <div class="col-xl-10 col-lg-10">
+                            <div class="col-xl-8 col-lg-10">
                                 <div class="menu-wrapper d-flex align-items-center justify-content-end">
                                     <!-- Main-menu -->
                                     <div class="main-menu d-none d-lg-block">
                                         <nav>
                                             <ul id="navigation">
-                                                <li class="active"><a href="index.html">Home</a></li>
-                                                <li><a href="courses.html">Courses</a></li>
-                                                <li><a href="about.html">About</a></li>
-                                                <li><a href="#">Blog</a>
-                                                    <ul class="submenu">
-                                                        <li><a href="blog.html">Blog</a></li>
-                                                        <li><a href="blog_details.html">Blog Details</a></li>
-                                                        <li><a href="elements.html">Element</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="contact.html">Contact</a></li>
+                                                <li class="active"><a href="/">Home</a></li>
+                                                <li><a href="/tutorial">Tutorial</a></li>
+                                                <li><a href="/about">About</a></li>
                                                 <!-- Button -->
-                                                <li class="button-header margin-left "><a href="#" class="btn">Join</a></li>
-                                                <li class="button-header"><a href="login.html" class="btn btn3">Log in</a></li>
+                                                <li class="button-header margin-left "><a href="https://github.com/LinggarM/Transformers-1.0" class="btn">Github Project</a></li>
                                             </ul>
                                         </nav>
                                     </div>
