@@ -1,12 +1,53 @@
 import numpy as np
 import pandas as pd
+import re
+from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFactory
+from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
+from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+from gensim.models import Word2Vec
+import gensim.models
 import tensorflow_hub as hub
+import tensorflow_text
 import tensorflow as tf
 from keras import backend as K
-import tensorflow_text
 from tensorflow.keras import Model
 from tensorflow.keras.layers import Input, Conv1D, LSTM, Flatten, Dense, Dropout
 from keras.layers.merge import concatenate
+
+class GlobalVariables() :
+
+	def __init__(self) :
+		self.id_mahasiswa = []
+		self.jawaban = []
+		self.idx_labeled = []
+		self.idx_sorted = []
+		self.pertanyaan_vectors = np.empty([2, 2])
+		self.jawaban_results = np.empty([2, 2])
+
+	def set_id_mahasiswa(self, id_mahasiswa) :
+		self.id_mahasiswa = id_mahasiswa
+		return self.id_mahasiswa
+
+	def set_jawaban(self, jawaban) :
+		self.jawaban = jawaban
+		return self.jawaban
+
+	def set_idx_labeled(self, idx_labeled) :
+		self.idx_labeled = idx_labeled
+		return self.idx_labeled
+
+	def set_idx_sorted(self, idx_sorted) :
+		self.idx_sorted = idx_sorted
+		return self.idx_sorted
+
+	def set_pertanyaan_vectors(self, pertanyaan_vectors) :
+		self.pertanyaan_vectors = pertanyaan_vectors
+		return self.pertanyaan_vectors
+
+	def set_jawaban_results(self, jawaban_results) :
+		self.jawaban_results = jawaban_results
+		return self.jawaban_results
 
 class Data :
 
@@ -210,6 +251,278 @@ class BERTEmbedding :
 		return pertanyaan_results['sequence_output'], jawaban_results['sequence_output']
 
 
+class W2vEmbedding() :
+
+	def __init__(self, pertanyaan, jawaban) :
+		
+		# Set Pertanyaan & Jawaban
+		self.pertanyaan = pertanyaan
+		self.jawaban = jawaban
+
+		# Data Preprocessing
+		pertanyaan_padded, jawaban_padded, tokenizer, vocab_size = self.dataPreprocessing(pertanyaan, jawaban)
+
+		# Build Vocabulary
+		vocab = self.buildVocabulary(pertanyaan_padded, jawaban_padded, tokenizer)
+
+		# Set Embedding Size
+		embed_size = 300
+
+		# Train Model
+		word_vectors = self.modelTraining(vocab, embed_size)
+
+		# Create Embedding Matrix
+		embedding_matrix = self.embeddingMatrix(vocab_size, embed_size, tokenizer, word_vectors)
+
+		# Encode
+		self.pertanyaan_results, self.jawaban_results = self.getEmbedded(embedding_matrix, pertanyaan_padded, jawaban_padded)
+
+	def dataPreprocessing(self, pertanyaan, jawaban) :
+		
+		# Case Folding
+		pertanyaan_cased = pertanyaan.lower()
+		jawaban_cased = [i.lower() for i in jawaban]
+
+		# Create Remover
+		factory = StopWordRemoverFactory()
+		remover = factory.create_stop_word_remover()
+
+		# Stopword Removal
+		pertanyaan_filtered = remover.remove(pertanyaan_cased)
+		jawaban_filtered = [remover.remove(i) for i in jawaban_cased]
+
+		# Filter Whitespace and Alphanumeric
+		pertanyaan_filtered = re.sub(r'[^\w\s]','', pertanyaan_filtered)
+		jawaban_filtered = [re.sub(r'[^\w\s]','', i) for i in jawaban_filtered]
+
+		# Filter Number
+		pertanyaan_filtered = re.sub(r'[\d]','', pertanyaan_filtered)
+		jawaban_filtered = [re.sub(r'[\d]','', i) for i in jawaban_filtered]
+
+		# Create Stemmer
+		factory = StemmerFactory()
+		stemmer = factory.create_stemmer()
+
+		# Stemming
+		pertanyaan_stemmed = stemmer.stem(pertanyaan_filtered)
+		jawaban_stemmed = [stemmer.stem(i) for i in jawaban_filtered]
+
+		# Create Corpus
+		corpus = [pertanyaan_stemmed] + jawaban_stemmed
+
+		# Create Tokenizer
+		tokenizer = Tokenizer()
+		tokenizer.fit_on_texts(corpus)
+
+		# Tokenization & Vectorization
+		pertanyaan_tokenized = tokenizer.texts_to_sequences([pertanyaan_stemmed])
+		jawaban_tokenized = tokenizer.texts_to_sequences(jawaban_stemmed)
+		
+		# Get Vocabulary Length
+		vocab_size = len(tokenizer.word_index) + 1
+
+		# Get Max Length (For Padding)
+		max_length = 0
+		for i in jawaban_tokenized :
+		  if len(i) > max_length :
+		    max_length = len(i)
+
+		# Padding
+		pertanyaan_padded = pad_sequences(pertanyaan_tokenized, maxlen = max_length, padding = "post")
+		jawaban_padded = pad_sequences(jawaban_tokenized, maxlen = max_length, padding = "post")
+		
+		return pertanyaan_padded, jawaban_padded, tokenizer, vocab_size
+
+	def buildVocabulary(self, pertanyaan_padded, jawaban_padded, tokenizer) :
+
+		# Vocabulary Initialization
+		vocab = []
+
+		# Build Vocabulary (Jawaban)
+		for i in jawaban_padded :
+		  vocab_now = [tokenizer.index_word[j] for j in i if (j != 0)]
+		  vocab.append(vocab_now)
+
+		# Build Vocabulary (Pertanyaan)
+		vocab_now = [tokenizer.index_word[j] for j in pertanyaan_padded[0] if (j != 0)]
+		vocab.append(vocab_now)
+
+		return vocab
+
+	def modelTraining(self, vocab, embed_size) :
+		
+		# Train Word2Vec
+		word2vec_model = Word2Vec(vocab, vector_size = embed_size, window = 3, workers = 3, sg = 1, hs = 1, min_count = 0)
+
+		# Set Word Vectors
+		word_vectors = word2vec_model.wv
+
+		return word_vectors
+
+	def embeddingMatrix(self, vocab_size, embed_size, tokenizer, word_vectors) :
+		
+		# Initilization with numpy zeros
+		embedding_matrix = np.zeros((vocab_size, embed_size))
+
+		# Assign every word vectors in tokenizer to embedding matrix
+		for word, i in tokenizer.word_index.items():
+		    try :
+		      embedding_vector = word_vectors.get_vector(word)
+		      if embedding_vector is not None:
+		          embedding_matrix[i] = embedding_vector
+		    except :
+		      print(word, "not in vocabulary")
+
+		return embedding_matrix
+
+	def getEmbedded(self, embedding_matrix, pertanyaan_padded, jawaban_padded) :
+		# Embed Pertanyaan
+		pertanyaan_results = np.array([embedding_matrix[i] for i in pertanyaan_padded])
+
+		# Embed Jawaban
+		jawaban_results = []
+		for i in jawaban_padded :
+		  embed_now = [embedding_matrix[j] for j in i]
+		  jawaban_results.append(embed_now)
+		jawaban_results = np.array(jawaban_results)
+
+		return pertanyaan_results, jawaban_results
+
+class PretrainedW2vEmbedding() :
+
+	def __init__(self, pertanyaan, jawaban) :
+		
+		# Set Pertanyaan & Jawaban
+		self.pertanyaan = pertanyaan
+		self.jawaban = jawaban
+
+		# Data Preprocessing
+		pertanyaan_padded, jawaban_padded, tokenizer, vocab_size = self.dataPreprocessing(pertanyaan, jawaban)
+
+		# Get Pre-train Word2Vec
+		word2vec_model = "static/files/pretrainedw2vid/wiki.id.case.vector"
+		word_vectors = gensim.models.KeyedVectors.load_word2vec_format(word2vec_model, binary=False)
+
+		# Get Embedding Size
+		embed_size = 400
+
+		# Create Embedding Matrix
+		embedding_matrix = self.embeddingMatrix(vocab_size, embed_size, tokenizer, word_vectors)
+
+		# Encode
+		self.pertanyaan_results, self.jawaban_results = self.getEmbedded(embedding_matrix, pertanyaan_padded, jawaban_padded)
+
+	def dataPreprocessing(self, pertanyaan, jawaban) :
+		
+		# Case Folding
+		pertanyaan_cased = pertanyaan.lower()
+		jawaban_cased = [i.lower() for i in jawaban]
+
+		# Create Remover
+		factory = StopWordRemoverFactory()
+		remover = factory.create_stop_word_remover()
+
+		# Stopword Removal
+		pertanyaan_filtered = remover.remove(pertanyaan_cased)
+		jawaban_filtered = [remover.remove(i) for i in jawaban_cased]
+
+		# Filter Whitespace and Alphanumeric
+		pertanyaan_filtered = re.sub(r'[^\w\s]','', pertanyaan_filtered)
+		jawaban_filtered = [re.sub(r'[^\w\s]','', i) for i in jawaban_filtered]
+
+		# Filter Number
+		pertanyaan_filtered = re.sub(r'[\d]','', pertanyaan_filtered)
+		jawaban_filtered = [re.sub(r'[\d]','', i) for i in jawaban_filtered]
+
+		# Create Stemmer
+		factory = StemmerFactory()
+		stemmer = factory.create_stemmer()
+
+		# Stemming
+		pertanyaan_stemmed = stemmer.stem(pertanyaan_filtered)
+		jawaban_stemmed = [stemmer.stem(i) for i in jawaban_filtered]
+
+		# Create Corpus
+		corpus = [pertanyaan_stemmed] + jawaban_stemmed
+
+		# Create Tokenizer
+		tokenizer = Tokenizer()
+		tokenizer.fit_on_texts(corpus)
+
+		# Tokenization & Vectorization
+		pertanyaan_tokenized = tokenizer.texts_to_sequences([pertanyaan_stemmed])
+		jawaban_tokenized = tokenizer.texts_to_sequences(jawaban_stemmed)
+		
+		# Get Vocabulary Length
+		vocab_size = len(tokenizer.word_index) + 1
+
+		# Get Max Length (For Padding)
+		max_length = 0
+		for i in jawaban_tokenized :
+		  if len(i) > max_length :
+		    max_length = len(i)
+
+		# Padding
+		pertanyaan_padded = pad_sequences(pertanyaan_tokenized, maxlen = max_length, padding = "post")
+		jawaban_padded = pad_sequences(jawaban_tokenized, maxlen = max_length, padding = "post")
+		
+		return pertanyaan_padded, jawaban_padded, tokenizer, vocab_size
+
+	def buildVocabulary(self, pertanyaan_padded, jawaban_padded, tokenizer) :
+
+		# Vocabulary Initialization
+		vocab = []
+
+		# Build Vocabulary (Jawaban)
+		for i in jawaban_padded :
+		  vocab_now = [tokenizer.index_word[j] for j in i if (j != 0)]
+		  vocab.append(vocab_now)
+
+		# Build Vocabulary (Pertanyaan)
+		vocab_now = [tokenizer.index_word[j] for j in pertanyaan_padded[0] if (j != 0)]
+		vocab.append(vocab_now)
+
+		return vocab
+
+	def modelTraining(self, vocab, embed_size) :
+		
+		# Train Word2Vec
+		word2vec_model = Word2Vec(vocab, vector_size = embed_size, window = 3, workers = 3, sg = 1, hs = 1, min_count = 0)
+
+		# Set Word Vectors
+		word_vectors = word2vec_model.wv
+
+		return word_vectors
+
+	def embeddingMatrix(self, vocab_size, embed_size, tokenizer, word_vectors) :
+		
+		# Initilization with numpy zeros
+		embedding_matrix = np.zeros((vocab_size, embed_size))
+
+		# Assign every word vectors in tokenizer to embedding matrix
+		for word, i in tokenizer.word_index.items():
+		    try :
+		      embedding_vector = word_vectors.get_vector(word)
+		      if embedding_vector is not None:
+		          embedding_matrix[i] = embedding_vector
+		    except :
+		      print(word, "not in vocabulary")
+
+		return embedding_matrix
+
+	def getEmbedded(self, embedding_matrix, pertanyaan_padded, jawaban_padded) :
+		# Embed Pertanyaan
+		pertanyaan_results = np.array([embedding_matrix[i] for i in pertanyaan_padded])
+
+		# Embed Jawaban
+		jawaban_results = []
+		for i in jawaban_padded :
+		  embed_now = [embedding_matrix[j] for j in i]
+		  jawaban_results.append(embed_now)
+		jawaban_results = np.array(jawaban_results)
+
+		return pertanyaan_results, jawaban_results		
+
 class MeasureDistance() :
 
 	def __init__(self, pertanyaan_results, jawaban_results) :
@@ -297,8 +610,8 @@ class DefineData() :
 		self.idx_test = [i for i in idx_sorted if i not in idx_labeled]
 
 		# Testing Data
-		self.pertanyaan_test = np.array([pertanyaan_vectors for i in range(len(idx_test))])
-		self.x_test = np.array([jawaban_results[i] for i in idx_test])
+		self.pertanyaan_test = np.array([pertanyaan_vectors for i in range(len(self.idx_test))])
+		self.x_test = np.array([jawaban_results[i] for i in self.idx_test])
 
 class AESModel() :
 
@@ -310,7 +623,7 @@ class AESModel() :
 		idx_labeled, idx_test) :
 		
 		# Set Model
-		self.model = getCNNLSTMModel()
+		self.model = self.getCNNLSTMModel(pertanyaan_train = pertanyaan_train, x_train = x_train)
 
 		# Train Model
 		epochs = 10
@@ -322,15 +635,17 @@ class AESModel() :
 		pred, pred_int = self.prediction(y_train, pertanyaan_test, x_test)
 
 		# Get id_mahasiswa
-		id_mahasiswa = self.getIDMahasiswa(self, id_mahasiswa, idx_labeled, idx_test)
+		id_mahasiswa = self.getIDMahasiswa(id_mahasiswa, idx_labeled, idx_test)
 
 		# Get jawaban
-		jawaban = self.getJawaban(self, jawaban, idx_labeled, idx_test)
+		jawaban = self.getJawaban(jawaban, idx_labeled, idx_test)
 		
 		# Create Dataframe
-		self.df_final = self.predictionDF(self, id_mahasiswa, jawaban, pred_int, pred)
+		self.df_final = self.predictionDF(id_mahasiswa, jawaban, pred_int, pred)
 
 	def getCNNLSTMModel(self,
+		pertanyaan_train,
+		x_train,
 	    filters = 64, 
 	    kernel_size = 3, 
 	    lstm_units = 128, 
@@ -406,25 +721,25 @@ class AESModel() :
 	def getScoreSorted(self) :
 		return self.df_final['score (float)'].tolist()
 
-	def saveToCSV(self) :
-		path = "./static/files/data/"
-		df_final.to_excel(f"{path}/scoring_result.csv", index = False)
+	# def saveToCSV(self) :
+	# 	path = "./static/files/data/export/"
+	# 	self.df_final.to_excel(f"{path}/scoring_result.csv", index = False)
 	
-	def saveToXLSX(self) :
-		path = "./static/files/data/"
-		# Export with Columns Width Adjustment
-		filename = f"{path}/scoring_result.csv"
-		dfs = {'df_final': self.df_final}
+	# def saveToXLSX(self) :
+	# 	path = "./static/files/data/export/"
+	# 	# Export with Columns Width Adjustment
+	# 	filename = f"{path}/scoring_result.csv"
+	# 	dfs = {'df_final': self.df_final}
 
-		writer = pd.ExcelWriter(filename, engine='xlsxwriter')
-		for sheetname, df in dfs.items():  # loop through `dict` of dataframes
-		    df.to_excel(writer, sheet_name=sheetname, index = False)  # send df to writer
-		    worksheet = writer.sheets[sheetname]  # pull worksheet object
-		    for idx, col in enumerate(df):  # loop through all columns
-		        series = df[col]
-		        max_len = max((
-		            series.astype(str).map(len).max(),  # len of largest item
-		            len(str(series.name))  # len of column name/header
-		            )) + 1  # adding a little extra space
-		        worksheet.set_column(idx, idx, max_len)  # set column width
-		writer.save()
+	# 	writer = pd.ExcelWriter(filename, engine='xlsxwriter')
+	# 	for sheetname, df in dfs.items():  # loop through `dict` of dataframes
+	# 	    df.to_excel(writer, sheet_name=sheetname, index = False)  # send df to writer
+	# 	    worksheet = writer.sheets[sheetname]  # pull worksheet object
+	# 	    for idx, col in enumerate(df):  # loop through all columns
+	# 	        series = df[col]
+	# 	        max_len = max((
+	# 	            series.astype(str).map(len).max(),  # len of largest item
+	# 	            len(str(series.name))  # len of column name/header
+	# 	            )) + 1  # adding a little extra space
+	# 	        worksheet.set_column(idx, idx, max_len)  # set column width
+	# 	writer.save()

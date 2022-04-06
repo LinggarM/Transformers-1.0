@@ -29,13 +29,32 @@
 
 <body>
     <!--? Preloader Start -->
-    <div id="preloader-active">
-        <div class="preloader d-flex align-items-center justify-content-center">
-            <div class="preloader-inner position-relative">
-                <div class="preloader-circle"></div>
-                <div class="preloader-img pere-text">
-                    <img src="{{ url_for('static',filename='assets/img/essay.png') }}" alt="">
+    <div id="loaderawal">
+        <div id="preloader-active">
+            <div class="preloader d-flex align-items-center justify-content-center">
+                <div class="preloader-inner position-relative">
+                    <div class="preloader-circle"></div>
+                    <div class="preloader-img pere-text">
+                        <img src="{{ url_for('static',filename='assets/img/essay.png') }}" alt="">
+                    </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div id="loaderprocess" style="display:none">
+        <div id="preloader-active">
+            <div class="preloader d-flex align-items-center justify-content-center">
+                                <div class="preloader-inner position-relative">
+                        <div class="preloader-circle"></div>
+                        <div class="preloader-img pere-text">
+                            <img src="/static/assets/img/essay.png" alt="">
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="section-tittle text-center mb-55" style="margin-bottom:0; padding-left:30px">
+                                <h2 style="margin-bottom:0">Training the Model</h2>
+                            </div>
+                    </div>
             </div>
         </div>
     </div>
@@ -133,27 +152,26 @@
     
     <script>
         function checkscore() {
-          var inputs = $(".single-input");
-          for (var i = 0; i < inputs.length; i++) {
+            var inputs = $(".single-input");
+            for (var i = 0; i < inputs.length; i++) {
               if ($(inputs[i]).val().length == 0) {
                 alert ("Please Fill The Score!");
                 return (false);
               }
-          }
+            }
+            showloader();
             return (true);
+        };
+        function showloader() {
+            document.querySelector("#loaderprocess").style.display = "block";
         }
     </script>
     <script>
         document.onreadystatechange = function() {
             if (document.readyState == "complete") {
-                document.querySelector("#preloader-active").style.display = "none";
+                document.querySelector("#loaderawal").style.display = "none";
             }
         };
-    </script>
-    <script>
-        function showloader() {
-            document.querySelector("#preloader-active").style.display = "visible";
-        }
     </script>
 
     <!-- JS here -->
