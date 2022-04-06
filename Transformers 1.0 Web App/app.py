@@ -77,16 +77,16 @@ def scoring():
 		# Load Page
 		return render_template('scoring.html', method = "post", jawaban_labeled = jawaban_labeled, num_score = num_score)
 	
-	# # Dummy Test
-	# jawaban_labeled = ['cuk', 'cik', 'cak', 'cok']
+	# Dummy Test
+	jawaban_labeled = ['test11', 'test12', 'test13', 'test14']
 
-	# # Get Iterator
-	# num_score = np.arange(len(jawaban_labeled))
+	# Get Iterator
+	num_score = np.arange(len(jawaban_labeled))
 
 	# Load Page
-	return render_template("scoring.html")
-		# jawaban_labeled = jawaban_labeled,
-		# num_score = num_score
+	return render_template("scoring.html",
+		jawaban_labeled = jawaban_labeled,
+		num_score = num_score)
 
 @app.route('/result', methods=['GET', 'POST'])
 def result():
@@ -142,20 +142,20 @@ def result():
 			score_new = score_new,
 			num_score = num_score)
 	
-	# # Dummy Test
-	# id_mahasiswa_new = [0, 3, 2, 1]
-	# jawaban_new = ['cuk', 'cik', 'cak', 'cok']
-	# score_new = [10, 9, 9, 10]
+	# Dummy Test
+	id_mahasiswa_new = [0, 3, 2, 1]
+	jawaban_new = ['test11', 'test12', 'test13', 'test14']
+	score_new = [10, 9, 9, 10]
 
-	# # Get Iterator
-	# num_score = np.arange(len(id_mahasiswa_new))
+	# Get Iterator
+	num_score = np.arange(len(id_mahasiswa_new))
 
 	# Load Page
-	return render_template("result.html")
-			# id_mahasiswa_new = id_mahasiswa_new,
-			# jawaban_new = jawaban_new,
-			# score_new = score_new,
-			# num_score = num_score
+	return render_template("result.html",
+			id_mahasiswa_new = id_mahasiswa_new,
+			jawaban_new = jawaban_new,
+			score_new = score_new,
+			num_score = num_score)
 
 @app.route('/tutorial', methods=['GET', 'POST'])
 def tutorial():

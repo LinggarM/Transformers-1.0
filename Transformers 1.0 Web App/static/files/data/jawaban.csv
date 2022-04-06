@@ -1,6 +1,306 @@
-id_mahasiswa;jawaban
-0;Karena orang berpikir bahwa jika disumbangkan akan membuat produksi pakaian menjadi lebih beretika
-1;Pakaian awet adalah alternatif terhadap Fast Fashion. Pakaian awet lebih mahal biaya produksi dan harga belinya, tetapi karena pakaian itu dibuat untuk bertahan lebih lama, maka yang dibuat pun menjadi lebih sedikit. Kita sebagai konsumen harus menolak tren Fast Fashion dan membeli pakaian yang lebih awet dan dibuat sesuai etika.
-2;karna orang lebih suka menyumbang
-3;karana harga nya terjangkau dan pas.
-4;kerena harganya mahal .
+id_mahasiswa;jawaban;score;score (float)
+0;Karena orang berpikir bahwa jika disumbangkan akan membuat produksi pakaian menjadi lebih beretika;1;0,923115849
+1;Pakaian awet adalah alternatif terhadap Fast Fashion. Pakaian awet lebih mahal biaya produksi dan harga belinya, tetapi karena pakaian itu dibuat untuk bertahan lebih lama, maka yang dibuat pun menjadi lebih sedikit. Kita sebagai konsumen harus menolak tren Fast Fashion dan membeli pakaian yang lebih awet dan dibuat sesuai etika.;0;0
+2;karna orang lebih suka menyumbang;0;0,060553901
+3;karana harga nya terjangkau dan pas.;0;0
+4;kerena harganya mahal .;0;0
+5;agar orang yg memerlukan juga bisa mempunyai baju seperti kita;1;0,504987419
+6;Karena melihat kondisi para pegawai;0;0
+7;karena dia kasihan;1;1
+8;karena memiliki pakaian yang melebihi atau sudah tidak layak dipakai pribadi;0;0,252943724
+9;karna mereka prihatin dengan para pekerja yang bekerja di sebuah pabrik pakaian ,karna pabrik pakaian tersebut sudah ingin bangkrut;1;0,862720191
+10;KARENA MENYUMBANG ITU HARUS DI LAKUKAN KARENA WAJIB DAN AKAN MENDAPATKAN YANG LEBIH UNTUK ORANG YANG MENYUMBANG;1;1
+11;mereka memilih untuk menyumbang karena mereka ingin memakai pakaian yang ber etika;1;0,609410405
+12;? karena kegiatan menyumbang lebih utama dan termasuk hal yang diwajibkan untuk orang ada,sedangkan membeli pakaian tidak terlalu perlu asal kita sudah mempunyai pakaian yang cukup;1;1,009158373
+13;karena orang orang masih peduli terhadap sesama;1;0,8944906
+14;karena kondisi di sebuah pabrik pakaian yang sangat mengejutkan;1;0,767461658
+15;karena dari pada dibuang lebih baik disumbangkan ke masyarakat yang tidak mampu [miskin];1;1,044303656
+16;karena mungkin mereka sadar bahwa banyak orang yang penghasilan nya sedikit dan kerja banting tulang hanya untuk makan sehari-hari.;1;0,671555459
+17;karena menyumbang itu lebih bermanfaat dari pada di buang;1;0,682227373
+18;karena dari pada pakaian di buang lebih baik di sumbangkan;0;0,302282274
+19;karena menyumbang itu sama denga sodaqoh juga itu bagi yg mampu dan hatinya ikhlas;1;0,522181273
+20;karna kondisi pekerja sangat memungkinkan,;1;1
+21;karna sebagai upaya untuk membuat produksi pakaian menjadi lebih beretika;1;0,787492633
+22;karna menyumbang suatu hal yang sangat bagus dan membarikan amal;1;0,855494022
+23;karena lebih banyak konsumen yang menyumbang akan menjadi hemat dengan masalah keuangan dan akan membuat produksi pakaian menjadi lebih beretika.;1;0,637924194
+24;karena mengetahui kondisi kerja di sebuah pabrik pakaian;0;0,086979955
+25;karena pakaian yang tidak dipakai lagi lebih baik disumbangkan dari pada dibuang di tempat sampah.;1;0,746781647
+26;karena dia tidak mau bererja;0;0,477871686
+27;karena jika banyak yang tidak terpakai akan mubasir;1;0,705289006
+28;karena t sebagai upaya untuk membuat produksi pakaian menjadi lebih beretika.;1;1
+29;karena yang tak terpakai lebih beretika;0;0,131355077
+30;Karena lebih yakin dalam menyumbangkan uangnya setelah melihat gambar yang ditampilkan perusahaan tersebut;0;0,241758138
+31;karena kalo sumumbangkan lebih berguna ketika dibuang begtu saja maka dari itu orang memilih lebh banyak disumbangkan;0;0
+32;karena melihat kondisi kerja yang buruk di sebuah pabrik para konsumen lebih memilih menyumbang daripada membelinya dengan harga 2 Euro.;1;0,70671612
+33;karena konsumen lebih memilih membuat prodeuksi pakaian lebih beretika daripada harus melanjutkan pembelian;1;1
+34;karena menyumbang dapat membantu pakir miskin yang sangat membutuhkan dan mendapat pahala;1;1,047915936
+35;ksarena dengan menyumbang, kita dapat membantu pabrik yang telah dalam masalah tersebut, agar dapat beroperasi dengan baik lagi;1;0,942489386
+36;untuk membuat toko tersebut lebih bagus lagi dan lebih complete;1;0,525294065
+37;karena bnyak yang membutuh kan;1;0,51409328
+38;Karena membuat produksi pakaian menjadi lebih beretika.;1;1
+39;karena dapat bermanfaat bagi sesama dan sesuai dengan etika pakaian sehingga dapat mengurangi smapah lingkungan dan polusi;1;0,74008739
+40;sebagai upaya untuk membuat produksi pakaian menjadi lebih beretika;1;0,636101842
+41;karena mungkin menurut mereka lebih jika disumbang untuk membuat produksi pakaian menjadi lebih beretika daripada membeli dipabrik pakaian yang tidak berprinsip pakaian beretika;1;0,58168757
+42;karena itu akan membantu para masyarakat yang kekurangan pakaian dan lebih bermanfaat daripada membuangnya secara cuma cuma;1;0,670389771
+43;karna sudah bosan dipakai dan lebih baik dipakai dengan orang lain;1;0,628921747
+44;karena mereka ingin upaya untuk membuat produksi pakaian menjadi lebih beretika;1;0,944409251
+45;karena mereka melihat tentang kondisi kerja di sebuah pabrik pakaian,sehingga mereka berpikir dengan menyumbang mereka dapat memperbaiki keadaan tersebut;1;0,960068166
+46;karena harga pakaian termasuk kategori murah dan mereka mengetahui kondisi kerja di sebuah pabrik terseebut;1;0,606546462
+47;upaya untuk membuat produksi pakaian menjadi lebih beretika.;0;0,284721673
+48;agar pabrik pakaian semakin baik dan dapat memproduksi pakaian yang baik pula untuk mereka.;1;1,024477005
+49;Agar pakaiannya bisa berguna bagi orang yang membutuhkan daripada harus dibuang lebih baik disumbangkan;0;0
+50;mereka kasihan dengan kondisi pabrik pakaian;0;0,28961274
+51;karena menurut mereka jika mereka bisa menyumbangkan 2 euro tersebut mereka berharap kondisi parik tersebut bisa diperbaiki;1;0,513884485
+52;karena dengan menyumbang kita akan mendapat pahala dan lebih bermanfaat;1;0,742985606
+53;agar pakaian bisa dibuat sesuai etika;1;0,997948706
+54;karena Setelahnya, konsumen diberi pilihan apakah akan melanjutkan pembelian atau menyumbangkan 2 Euro tersebut sebagai upaya untuk membuat produksi pakaian menjadi lebih beretika.;1;0,595322967
+55;karena mungkin mereka hanya peduli pada orang yang lebih membutuhkan dan karena mungkin sebagian orang tidak mampu;1;0,750773668
+56;karna kasihan terhadap kondisi para pekerja;0;0
+57;karna lebih baik menyumbang daripada yang disumbang,menyumbang kita dapat pahala atau rizki dari allah;1;0,80731684
+58;karna untuk sedekah;0;-0,177795067
+59;dikarenakan kondisi pabrik pembuat pakaian yang mengejutkan;1;0,716908574
+60;membuat produksi pakaian menjadi lbih beretika;1;0,510207772
+61;krena mungkin kekecilan /kebesaran;0;-0,019029915
+62;mereka memiliki rasa kepedulian terhadap sesama.;1;1,018066049
+63;tren Fast Fashion dan membeli pakaian yang lebih awet dan dibuat sesuai etika.;1;0,662634015
+64;karena jauh lebih bermanfaat bagi orang-orang yg membutuhkannya;1;0,911956847
+65;Karena apabila pakainan tersebut di buang akan menjadi limbah oleh sebab itu apabila mempunyai pakaian yang sudah tidak di pakai lagi lebih baik di sumbangkan;0;0,07921645
+66;karena masyarakat akan lebih memilih untuk membeli pakaian yang beretika;1;0,867835879
+67;karena menampilkan gambar yang mengejutkan tentang kondisi kerja di sebuah pabrik pakaian membuat pembeli merasa kasian dan berniat untuk menyumbang;1;0,742295563
+68;karena menyumbang merupakan kegiatan amal yang dapat bermanfaat bagi banyak orang;1;1,163652778
+69;"Mengurangi sampah lingkungan dan polusi;";0;0,077294871
+70;karena menolak harga yg terlalu tinggi;0;0,079154715
+71;tampilan kondisi kerja pada pabrik;1;0,587307394
+72;karena akan bermanfaat bagi yg membutuhkan;1;0,84202683
+73;karena,orang-orang tersebut bersimpati tentang kondisi kerja di sebuah pabrik pakaian.;1;1,150482178
+74;karena konsumen melihat kondisi kerja pabrib yang kurang layak;1;0,809014678
+75;karena mereka menyumbangkan semua pakaiannya beralasan karena pakaian itu sudah tak suka lagi di pakai,sehingga mereka menyumbangkannya;1;1,110052109
+76;karena di luar sana masih banyak yang membutuhkan, sehingga tidak sepenuhnya sumbangan tersebut digunakan untuk pakaian saja. tapi juga untuk yg lain;1;1,069174528
+77;karena sebagai upaya untuk membuat produksi pakaian menjadi lebih beretika;1;0,88876307
+78;tentang kondisi kerja di sebuah pabrik pakaian sebagai upaya untuk membuat produksi pakain menjadi beretika;1;1
+79;karena agar pabrik membuat atau memproduksi pakaian menjadi lebih beretika dan memastikan bahwa pekerja mendapatkan upah yg layak;1;0,940331638
+80;karena ada istilah lebih baik memberi aripada menerima;0;0,352489501
+81;untuk mengurangi penggunan air;0;0,152245089
+82;karena menyumbang itu bagus dan mendapatkan pahala;1;0,594757199
+83;karena mereka melihat tampilan gambar tentang kondisi kerja di sebuah pabrik pakaian yang mungkin menentang prinsip produksi pakaian yang beretika;1;0,654373527
+84;karena masyarakat lebih suka berbagi satu sama lain dan saling peduli satu sama lain;1;1,174977422
+85;memilih;0;0,138841912
+86;karena pakaian tersebut sudah tidak layak untuk dipakai da tidak beretika dengan baik;1;1,163561702
+87;karna perbuatan menyumbang untuk orang yang tidak mampu itu sangat mulia dan banyak mendapatkan pahala;1;0,624410391
+88;menurut saya, kebanyakkan orang menyumbang karena orang-orang itu ingin memproduksi pakaian yang baru.;1;0,546657085
+89;9/10 orang memilih menyumbang karena kondisi pakaian yang ingin mereka pakai bukan seperti yang diinginkan mereka setelah melihat layar tersebut, bisa jadi banyaknya bahan kimia yang digunakan dalam pembuatan pakaian yang akan mengganggu konsumen dalam pemakaiannya seperti gangguan kesehatan dan pakaian yang tidak tahan lama.;0;0,182788327
+90;KARENA PRIHATIN MELIHAT KEADAAN PARA PEKERJA PABRIK;1;1,193392277
+91;Karena pakaian yang dibeli merupakan fast fashion yang tidak dapat bertahan lama sehingga kebanyakan orang memilioh untuk menyumbangkan pakaian seharga 2 euro tersebut;0;0,243037343
+92;karna orang-orang berprihatin terhadap pabrik-pabrik yang kekurangan dana;0;0
+93;karena kalau disimpan pakaiannya akan kekecilan dan masih banyak yang membutuhkannya.;1;0,800726712
+94;karena, pakaiannya akan menjadi lebih beretika;1;0,507445931
+95;karna menyumbang adalah bekal untuk menuju surga;0;0,157703087
+96;karena dengan menyumbang untuk membuat produksi pakaian menjadi lebih beretika;1;1,036465883
+97;karena jika ikhlas menyumangkan sedikit uang kita untuk anak yatim atau ke panti asuhan kita akan mendapatkan pahala yang setimpal.;0;0,340881884
+98;karena jika mereka menyumbangkan dengan barang akan berguna kedepanya;1;0,642225742
+99;untuk meningkatkan kualitas barang yang memuaskan untuk konsumen da menjadikan produksi pakaian menjadi lebih beretika;1;0,920894086
+100;pakian awet adalah alternatif terhadap fast fashion. pakian awet lebih mahal biaya produk dan harga belinya, tetapi karena pakaian itu di buat untuk bertahan dengan lama;0;0
+101;Menurut saya, para konsumen yang mengerti kondisi kerja yang tidak layak, mereka akan merasa iba dan lebih mengiklaskan 2 Euro tersebut dibanding membeli kaosnya. Sehingga para pekerja bisa mempunyai kondisi kerja dan penghasilan yang baik.;1;1
+102;Karena menurut mereka pakaian tersebut tidak beretika.;1;1,063446045
+103;karna itu lebih bermanfaat untuk orang lain daripada harus terbuang sia-sia;1;1
+104;2 euro tersebut sbg upaya untuk prokduksi pakaian menjadi beretika;0;0,318209976
+105;karna dapat membantu orang;0;0
+106;Karena kasihan dengan kondisi para pekerja.;1;1
+107;karena pakain tersebut tidak layak untuk dipakai;0;0,447217733
+108;Karena daripada dibuang dan menjadi sampah, lebih baik disumbangkan.;1;0,899315596
+109;karena konsumen berpikir lebih baik menyumbang kan ny dari pada harus menjual ny.;0;0,30449301
+110;karena akan lebih baik lagi dari sebelumnya.;1;1,040814996
+111;karena pakaian itu beretika;1;0,929733276
+112;karena banyak yang membutuhkan;0;0,399361402
+113;karena kalau dibuang dapat merugikan,makanya sebagian besar orang menyumbangkannya.;1;0,774479866
+114;"kerena mereka ingin membantu perusahaan itu untuk membuat produksi pakaian menjadi lebih beretika dan membantu karyawan nya mendapat upah layak dan kondisi kerja yang baik;";1;0,769274473
+115;Sebagai upaya untuk membuat produksi pakaian menjadi lebih beretika.;1;0,776664853
+116;karena jika membeli pakaian lagi akan memenuhi pakaian lemari dan yg sudah tdk layak akan dibaung,maka kebanyakan orng memilih untuk disumbangkan kpda orng lain dan sumbangan baju tersebut layak untuk diapakai yg kurang mampu;0;0,398374915
+117;karena konsumen melihat dari kondisi kerja di sebuah pabrik pakaian tersebut kurang beretika sehingga mereka menyumbangkan 2 Euro untuk membuat produksi pakaian yang lebih beretika.;1;1,159993649
+118;menurut saya, kebayakan orang memilih untuk menyumbang karena mungkin saja setelah melihat kondisi kerja di pabrik tersebut, masyarakat menaruh harapan kelak perusahaan tersebut dapat memproduksi pakaian menjadi lebih beretika,;1;0,882613063
+119;karna penyumbangan itu baik untuk membuat prodouksi pakaian menjadi lebih beretika;1;0,734796643
+120;karena menyumbang itu sama saja menolong orang lain yang sedang kesusahan;1;1,008560896
+121;kebanyakan orang memilih untuk menyumbang supaya pabrik pakaian tersebut memperbaiki kondisi kerja produksi pakaian yang lebih beretika;0;0,488926023
+122;agar dapat membantu menjadi lebih mudah, dan membuat barang produksi lebih diminati;1;1
+123;karena melihat gambar tentang kondisi kerja subuah pabrik pakaian;1;0,658471763
+124;karena menyumbang adalah hal yang baik untuk masyarakat yang miskin atau tidak mampu;1;1,225848556
+125;karena konsumen-konsumen tersebut sudah tahu dan sadar bagaimana buruknya kondisi kerja di salah satu pabrik pakaian. maka dari itu, 9 dari 10 konsumen memilih untuk menyumbangkan kaus 2 euro tersebut untuk meningkatkan kondisi kerja di pabrik-pabrik pakaian.;1;1
+126;karena mereka telah melihat bagaimana kondisi kerja di sebuah pabrik;1;1,031160355
+127;karena konsumen ingin berupaya untuk membuat produksi menjad lebih beretika;1;1,064809084
+128;karena lebih baik menyumbang daripada membeli;0;0,271135002
+129;karena mengurangi sampah lingkungan dan polusi;0;0,149170399
+130;karena barang yang tidak layak di pakai seharusnya di sumbangkan untuk diamalkan kepada orang yang lebih membutuhkan;1;0,765606403
+131;KARENA MENYUMBANG ADALAH HAL YANG SANGAT BAIK;1;1,208620787
+132;fashion adalah produksi pakaian untuk memenuhi tren fashion cepat berubah;1;0,528344393
+133;Karena dengan menyumbangkan uang akan menurangi pakaian fast fashion dan meningkatkan pakaian beretika.;0;0,376660377
+134;mungkin karna kondisi pabrik yang kurang mendukung atau kondisi perkerja yang kasihan;0;0,436395288
+135;karena konsumen tidak tega melihat pekerja yang bekerja keras dengan gaji rendah;1;0,987560809
+136;karna kaus yang di tawarkan oleh produsen belum banyak diminati oleh pembeli;0;0,117475726
+137;karena menyumbang bagian dari amal;1;0,523715734
+138;sebab untuk membantu produktivitas suatu pabrik;0;0,464574426
+139;karena pakaian-pakaian ini biasanya murah dan tidak bertahan lama karena konsumen biasanya cepat menggantinya dengan mode terbaru.;1;0,672307253
+140;karena akan sayang kalo di buang begitu saja . lebih baik di kasih kepada orang yang membutuhkan;1;0,864563286
+141;karena menyumabng adalah perbuatan yang terpuji dan dapat membantu kita untuk mendapat pakaian yang beretika karena semua bahan untuk memproduksi terpenuhi dari hasil kita menyumbang;1;1
+142;supaya bisa mengurangi pakaian yang berakhir ditempat pembuangan sampah.;1;0,500508606
+143;pakaian awet adalah alternatif terhadap fast fashion;0;0
+144;karena lebih bermanfaat.;1;1,027632833
+145;Dikarenakan sembilan dari sepuluh konsumen tersebut menyadari akan betapa buruknya akibat dari pakaian yang tidak memenuhi etika.;1;0,545743406
+146;? karena,jika mereka menyumbangkan 2 euro untuk membuat produksi pakaian menjadi lebih beretika,maka pembuatannnya makin banyak sehingga biayanya yang mahal akan menjadi murah;1;0,808062434
+147;karena jika konsumen tersebut membelinya akan menambah sampah lingkungan;1;0,649164915
+148;karena mereka atau konsumen yang membeli melihat langsung tentang kondisi kerja disebuah pabrik pakaian dan ternyata hasilnya mengejutkan dikarenakan konsumen melihat pabrik membuat pakaian yang kurang berateka;1;1
+149;karena dengan menyumbangkan uang sebanyak 2 Euro tersebut konsumen akan mendapatkan pakaian yang lebih beretika;0;0,152323112
+150;karena menurut mereka tempat pembuatanya atau cara kerja mereka kurang baik.;1;1,012369752
+151;karena terlalu banyaknya pakaian yang sudah di beli;1;1
+152;karena dengan cara menyumbang itu bisa membuat produksi pakaian menjadi lebih beretika;1;1,127565622
+153;untuk membantu orang yang membutuhkan;1;0,895574152
+154;KARNA MEREKA SANGAT MENYUKAI KAUS PUTIH TERSEBUT;1;1,132618666
+155;Karenam sebelum sebuah kaus diberikan kepada konsumen, layar menampilkan gambar yang mengejutkan tentang kondisi kerja di sebuah pabrik pakaian.;0;-0,044799343
+156;Sebagai bagian dari eksperiman, sebuah mesin penjual di Berlin menawarkan kaus putih seharga 2 Euro (atau sekitar Rp30.000). Sebelum sebuah kaus diberikan kepada konsumen, layar menampilkan gambar yang mengejutkan tentang kondisi kerja di sebuah pabrik pakaian.  karena pakaian itu dibuat untuk bertahan lebih lama, maka yang dibuat pun menjadi lebih sedikit. Kita sebagai konsumen harus menolak tren Fast Fashion dan membeli pakaian yang lebih awet dan dibuat sesuai etik;1;1
+157;Karena 2 euro sama dengan harga sebuah kaus putih;0;-0,20096828
+158;krena menyun bang itu berpahala;0;-0,278924555
+159;karena kondisi kerja pabrik iyu bagus;1;0,757816494
+160;karena menyumbang merupakan suatu bentuk mengamal, menyumbang dalam ajaran agaama yaitu memberi kepada orang yang membutuhkan . itu merupakan suatu tindakan yang terpuji;1;1,117980242
+161;Karna itu merupakan infestasi;1;0,550163388
+162;karana dengan menyumbang kita bisa membuat produksi pakain menjadi lebih beretika;1;0,783475518
+163;karena kondisi di sebuah pabrik yg mengejutkan.;1;0,731982112
+164;karna lebih murah jika menyumbang ,mengapa lebih murah karna 2 euro tersebut sebagai upaya untuk membuat produksi pakaian menjadi lebih beretika;0;0,136622384
+165;Sebagai upaya untuk membuat produksi pakaian menjadi lebih beretika.;1;0,776664853
+166;karena yang harus di produksi setiap tahun;0;0
+167;Karena mereka merasa kasihan kepada kondisi di pabriknya yang mungkin tidak bersih atau mungkin mesinnya tidak lengkap dan merasa kasihan kepada pegawainya yang mendapatkan gaji kurang dari yang ditetapkan.;1;1,111264467
+168;karena kalo menyumbang akan dapat pahala;1;0,840067565
+169;mungkin pakaian itu tidak bagus untuk di pakai lagi.dan mungkin saja pakaian itu tidak muat di pakai oleh orang tersebut,;0;0
+170;karena konsumen ingin merubah produsen yang membuat fast fashion ini menjadi lebih baik melihat pabriknya yang terlihat sangat buruk, lagipula hanya dengan memberikan 2 euro saja bukanlah uang yang banyak dan orang pasti tak apa merelakannya.;1;0,778962076
+171;Menurut saya, kebanyakan orang memilih untuk menyumbang agar pabrik bisa dibenahi dengan menggunakan uang sumbangan mereka. Selain itu mereka ingin memperbaiki kondisi kerja pabrik pakaian yang sangatlah buruk dan sangat tidak sesuai dengan prinsip produksi pakaian yang beretika nomor 1 yaitu 'Memastikan bahwa pekerja mendapatkan upah layak dan kondisi kerja yang baik'.;1;1,150780439
+172;karena untuk membantu sebagian konsumen;1;0,586964309
+173;karena menyumbang lebih baik daripada menerima;1;1
+174;karena lebih bermanfaat, dari pada diabuang dan tidak ada yang menggunakan;0;0,187704206
+175;karna gambarnya tidak cocok dengan warna kaus baju;0;-0,10023848
+176;Karena kita juga makhluk sosial harus tolong menolong jadi kita pantas menyumbang kepada orang yang ada dibawah kita;1;0,914746404
+177;karena dengan menyumbang para konsumen dapat membantu para pekerja;1;0,913709939
+178;Karena dengan menyumbang akan membantu proses produksi yang lebih bagus lagi maka akan banyak konsumen nantinya yang akan membeli produk tersebut;1;0,87524116
+179;produksi pakaian menjadi lebih beretika.;1;0,708959579
+180;lebih baik menyumbang;0;0
+181;akaian-pakaian ini biasanya murah dan tidak bertahan lama karena konsumen biasanya cepat menggantinya dengan mode terbaru. Fas;0;0,320571303
+182;karena dia ingin pakaian mereka beretika;1;0,843013465
+183;karena dia akan membuat produksi pakaian yang beretika maka dia akan menyumbangknnya;1;0,80825603
+184;upaya untuk membuat produksi pakaian menjadi lebih beretika;0;0
+185;karna menyambung lebih gampang dari memputus;0;0,071433179
+186;menurut saya, kebanyakan orang memilih menyumbangkan bajunya dikarenakan baju itu sudah tidak muat lagi, merasa tidak nyaman lagi;1;0,521849692
+187;karena mereka melihat kondisi kerja di sebuah pabrik pakaian;1;0,561840713
+188;karena dengan cara menyumbang pakaian kita menjadi lebih beretika;1;0,799127877
+189;itu dapat barang dari konsumen itu dapat terjual juga.;1;1,109190702
+190;karena mendapatkan pahala;0;0
+191;karena pakaian itu bisa dipakai dan pakaian nya pun beretika;1;1,03415513
+192;karena untuk membantu proses perbaikan sebuah pabrik agar terlihat lebih layak dan produksi pakaian menjadi lebih beretika;1;1,015764356
+193;"karena mereka mengetahui akan kelebihan dari pakaian yang beretika seperti ; Memastikan bahwa pekerja mendapatkan upah layak dan kondisi kerja yang baik Mengurangi sampah lingkungan dan polusi dan Mengurangi penggunaan air.";1;0,941349864
+194;karena dengan menyumbang maka akan membuat produksi pakaian beretika dan kondisi kerja pabrik menjadi lebih baik daripada sebelumnya;1;0,987409055
+195;karena jika mereka menyumbakan masih banyak yang bisa menggunakan orang di luar sana. dan jika dibuang sangat tidak bagus krena mungkin pakean tersebut masih layak pakai tapi mereka membuangnya.;1;0,657939911
+196;karena munkin kebanyakan orang mwngahargai apa yang di lakukan perusahan;0;0,197817624
+197;karena kondisi kerja tersebut menampilkan bahwa pekerja tidak mendapatkan upah yg layak dan kondisi kerja yg baik;1;1,129872084
+198;karenakasian;0;0
+199;karan menyumbang perbuatan baik dan menambah pahala bagi kita juga.;1;1,062978148
+200;meemas tikan bahwA pejerja mendapatkan upah layak;0;0
+201;kenapa kita harus menyum bang karena kita sebagai manusia kitaharu saling yolong menolong dan untuk kebaikan juga sangat pentinng bagi manusia;1;1,01616621
+202;Karna mereka melihat gambar yang mengejutkan tentang kondisi kerja di sebuah pabrik pakaian.;0;0,311130166
+203;sebagai upaya untuk membuat produksi pakaian menjadi lebih beretika.;1;0,707822204
+204;karena menyumbang itu lebih bagus.;1;0,919668496
+205;karena untuk produksi pakaian untuk menjadi lebih beretika.;1;0,926459908
+206;karena sebelum kaus diberikan kepada konsumen,layar menampilkan gambar yang mengejutkan tentang kondisi kerja di sebuah pabrik pakaian.;0;0
+207;Sebagai bagian dari eksperiman, sebuah mesin penjual di Berlin menawarkan kaus putih seharga 2 Euro (atau sekitar Rp30.000). Sebelum sebuah kaus diberikan kepada konsumen, layar menampilkan gambar yang mengejutkan tentang kondisi kerja di sebuah pabrik pakaian. Karena, pada negara-negara lain mungkin Fashion nya masih kurang beretika yang menyebabkan negara-negara yang sudah bagus memiliki Fashion, akan terganggu dan akan menyebabkan budaya-budaya luar masuk kepada negara yang sudah memiliki Fashion yang berkelas.;0;0
+208;karena kondisi kerja disebuah pabrik pakaian tidak layak;1;0,918247581
+209;karena mereka melihat kondisi kerja dipabrik pakaian tersebut tidak layak;1;1,097674251
+210;Sebagai bagian dari eksperiman, sebuah mesin penjual di Berlin menawarkan kaus putih seharga 2 Euro (atau sekitar Rp30.000). Sebelum  Sebagai bagian dari eksperiman, sebuah mesin penjual di Berlin menawarkan kaus putih seharga 2 Euro (atau sekitar Rp30.000). Sebelum sebuah kaus diberikan kepada konsumen, layar menampilkan gambar yang mengejutkan tentang kondisi kerja di sebuah pabrik pakaian.;0;0
+211;karena mereka ingin upaya untuk membuat produksi pakaian menjadi lebih beretika;1;0,944409251
+212;karena untuk sodakoh dan membantu;1;0,894607067
+213;Karena jika mereka memilih melanjutkan pembelian maka akan menyebabkan pemborosan uang.;0;0,234353527
+214;karena kondisi kerja pabrik pakaian yang memprehatinkan;1;0,611630917
+215;karna berbagi itu indah;0;0,368943274
+216;karena lebih baik disumbangkan daripada dibuang dan menjadi limbah dan sampah;1;0,709243953
+217;UNTUK MEMBERIKAN SEDEKAH YANG DIBERIKAN OLEH TUHAN YANG MAHA ESA;1;1
+218;karena biar tercukupinya dana untuk pembuatan pakaian yang beretika.;1;0,96729517
+219;karena mereka mendukung akan perubahan produksi pakaian menjadi lebih beretika.;1;1,102963448
+220;karena, menunjukan tentang kondisi kerja di sebuah pabrik pakaian.;1;0,928397119
+221;karena kalau pakaian yang sudah tidak dipakai terus disumbangkan akan mengurangi penumpukan sampah pakaian;0;0
+222;jihydgsjdisadusdtgwtsfdhs;0;-0,074909605
+223;karena untuk upaya membuat produksi pakaian menjadi lebih beretika.;1;0,849407971
+224;karena lebih baik menyumbang dari pada di sumbang jika kita menyumbang belum tentu rejeki datang menimpal perusaahan tersebut.;0;0,085874103
+225;karna sebagai upaya untuk membuat produksi pakaian menjadi lebih beretika;1;0,787492633
+226;Karena mereka berfikir jika uang/barang yang mereka disumbangkan akan menambah rezeki mereka bukan malah berkurang dan mereka pun akan mendapat pahala dari apa yang mereka lakukan.;1;0,697039783
+227;karena sayang untuk di buang;0;0
+228;agar pekerja mendapatkan upah yg layak;1;1
+229;Karena kebanyakan orang merasa prihatin dengan pekerja pekerja pada perusahaan pabrik pakaian;1;0,632489383
+230;menyebab kankondisi kerja;0;-0,107860252
+231;karena masyarakat menginginkan pakaian yang beretika dan menginginkan upah dan tempat kerja yang layak;1;0,923373759
+232;karena ia adalah sebagai upaya untuk membuat prokduksi pakaian menjadi lebih beretika;1;1,134604931
+233;karena lebih baik untuk semuanya;1;0,793727756
+234;menurut saya menyumbang akan menjadi hal yang baik jika itu untuk hal kebaikan juga;1;0,93849659
+235;karena dengan menyumbang dapat membantu orang yang membutuhkan;1;1,010349154
+236;karna harga yang ditawarkan tidak sebanding dengan kualitas kaus yang diberikan sehingga banyak konsumen yang berfikir lebih baik untuk disumbangkan saja dari pada membeli sebuah kaus dengan harga 2 Euro;0;0,057510968
+237;karena menyumbang itu lebih baik;0;0,383249372
+238;Karena perihatin dengan kondisi pekerja.;1;1
+239;karena kasian terhadap pekerjaklarena kerjanya begitu letih akan tetapi upahnya sedikit.;1;1
+240;Karena Dengan menyumbang kita bisda mendapat amal sekaligus Mengurangi sampah;0;0,049159981
+241;Karena orang luar sudah banyak yang lihat bagaimana cara pembuatan baju tersebut yang bisa dibilang sangat tidak efektif sehingga tidak layak untuk dipakai dan orang lain tersebut merasa kasihan dan karena itu ia tidak tega melihat mereka makanya ia menyumbangkan uangnya untuk mereka yang pantas menerimanya;1;0,944342792
+242;Karna menyumbang adalah salah satu upaya untuk membuat produksi pakaian menjadi lebih beretika;1;0,725010395
+243;karena biar laris kalo berjuaalan dan untuk beramal ibadah;1;1,073844194
+244;karena sumbangan tersebut dapat membuat produksi pakaian tersebut lebih berkualitas dan pembuatannya lebih beretika.;1;0,926938295
+245;karena saat melihat tentang kondisi kerja di sebuah pabrik pakaian tersebut mungkin terdapat gambar pekerja yang sedang bekerja dengan tidak layak atau gambar pekerja yang memakai pakaian yang tidak layak untuk dipakai.Jadi konsumen memilih memyumbang baju tersebut karena merasa kasihan atau khawatir melihat kondisi kerja di pabrik pakaian .tersebut.;1;1
+246;jika kita menyumbang kita akan dapet pahala dan kita akan membantu orang yang sangat membutuhkan sejumlah sumbangan yang kita berikan.;1;0,925385952
+247;karena tidak terpakai;0;0
+248;sebagai upaya untuk membuat produksi pakaian menjadi lebih beretika.;1;0,707822204
+249;Bisa menmbah pahala bisa jadi banyak manfaat bisa menyenangkan hati. DAN TIDAK MENYUSAHKAN TUKANG SAMPAH;1;1
+250;karena menurut konsumen menyumbang adalah salah satu cara yang baik agar kita tidak memboros dengan cara membuangnya ketenmpat sampah,melainkan kita bisa berbut kebaikan dengan cara menyumbangkannya kepada orang yang tidak mampu;1;1
+251;karenaa sebagian orrang islam ingin berbagi amal untuk mendapatkan pahala denggan menyumbang itu allah akn mengati dengaan pahal yang berlipakkn gnda;0;0,360433102
+252;karena sebelum sebuah kaos diberikan kepada konsumen, layar menampilkan gambar yang mengejutkan tentang kondisi kerja di sebuah pabrik pakaian.;0;0,109098285
+253;karena uangnya pun lebih bermanfat untuk membeli kebutuhan hidup.di bandingkan menyumbang pakeaian.;0;0,351000458
+254;Sebagai bagian dari eksperiman, sebuah mesin penjual di Berlin menawarkan kaus putih seharga 2 Euro (atau sekitar Rp30.000). Sebelum sebuah kaus diberikan kepada konsumen, layar menampilkan gambar yang mengejutkan tentang kondisi kerja di sebuah pabrik pakaian. Setelahnya, konsumen diberi pilihan apakah akan melanjutkan pembelian atau menyumbangkan 2 Euro tersebut sebagai upaya untuk membuat produksi pakaian menjadi lebih beretika. Sembilan dari sepuluh konsumen memilih untuk menyumbang. Menurutmu, mengapa kebanyakan orang memilih untuk menyumbang? karna dari pada tidak terpakai dan menjadi sampah mendingan dikasih kepada orang yang membutuhkan dengan cara disumbangkan;0;0
+255;karena lebih baik menyumbang dari pada beli;0;0,248238623
+256;Menyumbang merupakan perbuatan baik, lebih baik memberi dari pada menerima;0;0,348517805
+257;karena kondisi kerja dari sebuah pabrik sangat tidak menjamin untuk melakukan produktifitas;1;1,051414013
+258;karena mengurangi produksi pembuatan pakaian.;1;1
+259;karena upaya untuk membuat produksi pakaian menjadi lebih beretika;1;0,520671308
+260;karna dengan menyumbang konsumen bisa membeli barang baru atau di belanjakannya;0;0,181680962
+261;Kareana kekurangan-kekurangan pabrik yang mengejutkan untuk bahan-bahan pakaian yang akan melanjutkan pembelian.;0;0,264654785
+262;Karena banyak orang yang tidak suka;0;0
+263;karena'pakaianawetlebihmahal.;1;1,184302807
+264;KARNA MENYUMBANG KITA BISA MENGAMALKAN KARNA DAPET PAHALA;1;1,10269928
+265;Karena untuk pakaian yang tidak dipakai bisa disumbangkan bagi yang membutuhkan karena lebih beretika.;1;1
+266;karena dengan menyumbang produsen akan mengondisikan kerja disebuah pabrik;1;0,522676587
+267;karena,mereka ingin ada produk pakaian yang lebih beretika.;1;0,66202265
+268;karena pembeli ingin menyejahterakan para pekerja dan melindungi lingkungan dari polusi;1;0,845625401
+269;karena dengan menyumbangkannya dapat membantu untuk upaya produksi pakaian menjadi lebih beretika;1;1,164149523
+270;karena menyumbang mendapatkan amal ibadah;1;1
+271;karena baju lama bisa digunakan kembali tidak harus dibuang ke tempat sampah kita bisa memberikan kepada orang yang tidak mampu;0;0,485040128
+272;karena lebih mudah;0;0
+273;karena orang yang diluar sana banyak membutuhkan sumbangan;0;0,243919566
+274;gar pakaian yang sudah tidak terpakai tidak hanya dibuang, tetapi masih bisa dimaanfaatkan untuk dipakai orang lain;0;0,26678738
+275;Agar pakaian yang kita pakai semua beretika dan nyaman dipakai;0;0,174719825
+276;karena menyumbang lebih bermanfaat untuk para perkerja di pabrik pakaian .;1;1,016046286
+277;agar upaya untuk membuat produksi pakaian menjadi lebih beretika.;1;0,65298295
+278;Karena Untuk Membantu masyarakat yang membutuhkan;1;1
+279;karena mereka lebih memilih pakaian yang beretika;1;0,791648209
+280;Karena menyuban lebih baik daripada berlebihan untuk mebeli pakaian yang terlalu banyak .;1;0,825314164
+281;karena kondisi kerja yang dialami para pekerja sangat lah tidak layak, jadi sebagian orang berpikir lebih baik untuk menyumbangkan uang tersebut;1;1
+282;Mengurangi sampah lingkungan dan polusi;0;0
+283;agar para pekerja tersebut atau pabrik tersebut bisa membuat pakaian yang lebih beretika dalam jumlah yang banyak;1;0,861050665
+284;"Alia sedang mengerjakan sebuah laporan tentang isu etika terkait produksi dan konsumsi pakaian. Dalam penelitiannya, dia menemukan informasi di blog tentang “Fast Fashion” (Fashion Jangka Pendek): Fast Fashion adalah produksi pakaian untuk memenuhi tren fashion yang cepat berubah. Pakaian-pakaian ini biasanya murah dan tidak bertahan lama karena konsumen biasanya cepat menggantinya dengan mode terbaru. Fast Fashion artinya semakin banyak pakaian yang harus diproduksi setiap tahun dan pakaian-pakaian tersebut harus murah. Produksi ini sering menyebabkan kondisi kerja yang tidak baik dan dampak negatif yang lebih besar terhadap lingkungan. Pakaian awet adalah alternatif terhadap Fast Fashion. Pakaian awet lebih mahal biaya produksi dan harga belinya, tetapi karena pakaian itu dibuat untuk bertahan lebih lama, maka yang dibuat pun menjadi lebih sedikit. Kita sebagai konsumen harus menolak tren Fast Fashion dan membeli pakaian yang lebih awet dan dibuat sesuai etika. Alia juga menemukan bahwa produksi pakaian yang beretika harus mengikuti tiga prinsip penting: Prinsip Produksi Pakaian yang Beretika Memastikan bahwa pekerja mendapatkan upah layak dan kondisi kerja yang baik; Mengurangi sampah lingkungan dan polusi; Mengurangi penggunaan air.";0;0
+285;karena menyumbang sama saja seprti beramal dan bisa juga membantu saudara kita yang kesusahan;1;0,721951187
+286;karna untuk membeli pakaian;0;-0,117539331
+287;karena pekerjaan nya tidak beretika dan lebih milih menyumbang untuk membuat produksi pakaian menjadi lebih beretika;1;0,835774958
+288;karena orang menghargai upaya pekerja untuk membuat pakaian tersebut;1;0,938667893
+289;Karena itulah salah satu dari amal;1;1,051405191
+290;karna dengan menyumbang nya kita bisa mendapatkan kembali barang yang lebih;0;0,271211773
+291;Rasa empati akan kondisi produksi tempat tersebut.;1;1
+292;karna menyumbang itu adalah hal positif dan mendapatkan amal ibadah;1;0,994652748
+293;dikarenakan;0;0
+294;karna meraka libih memilih pakaian yg beretika. tentang kondisi kerja disebuah pabrik pakaian;1;0,725828171
+295;karena mungkin menurut mereka, sesuai dengan harga dan kaus yang ia terima;0;0,110044345
+296;karena di sumbangkan mendapat pahala di bandingkan di buang;0;0,145869836
+297;karena,dari pada membeli kaus putih seharga 2 Euro;0;-0,208575785
+298;karana menyumbang bisa membuat orang lain senang dan memdapatkan pahala;0;0,3386617
+299;karena supaya pabrik kaus tersebut menjadi lebih bagus dan membuat produksi pakaian menjadi lebih beretika.;1;1,114844084
+300;Karena,sebuah mesin penjual di Berlin menawarkan kaus putih seharga 2 Euro (atau sekitar Rp30.000).;0;-0,08037059
+301;Mereka melihat kondisi pekerja di pabrik pakaian yang mengesankan dan kurang baik. Sehingga mereka lebih memilih untuk menyumbangkan uangnya untuk membuat produksi pakaian lebih beretika dibanding dengan membelinya yang akan malah membuat tanda setuju atau apresiasi dengan kondisi pekerja saat ini.;1;1
+302;karena yang disumbangkan adalah pakaian yang sudah tak terpakai;1;0,661915183
+303;karena lebih baik tangan diatas daripada tangan dibawah;1;0,641260386
+304;karena menyumbangkan 2 Euro tersebut sebagai upayauntuk membuat produksi;1;0,791246474
